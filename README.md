@@ -1,4 +1,4 @@
-# topdesk-linker
+# topdesk-linker (Jira Plugin)
 The idea behind this plugin is to add an entry to the issue views More Actions menu entry.
 
 The entry will look for a number of links based on a link type(preferred) or a naming convention of the link. It will
@@ -22,7 +22,12 @@ Don't worry about actually hitting an end point yet.
 * Extra Credit 2: Refresh the Icon of each link after the status is sent.
 
 # Where to start
-Install the [Atlassian SDK](https://developer.atlassian.com/jiradev/getting-started/getting-started-with-plugins2) 
+
+## Clone
+
+Clone this.
+
+## Install the [Atlassian SDK](https://developer.atlassian.com/jiradev/getting-started/getting-started-with-plugins2) 
 
 Here are the SDK commands you'll use immediately:
 
@@ -32,3 +37,15 @@ Here are the SDK commands you'll use immediately:
                  - 'pi' reinstalls the plugin into the running product instance
 * atlas-help  -- prints description for all commands in the SDK
 
+## Install the Web Fragment Finder
+This free plugin will give you some hints as to the different UI components in Jira. After you have started up the development
+instance by running atlas-run you can install this [free plugin](https://marketplace.atlassian.com/plugins/com.wittified.webfragment-finder/cloud/overview)
+
+## Look at these pages
+These may be relevant
+
+* [Web Section](https://developer.atlassian.com/jiradev/jira-platform/building-jira-add-ons/jira-plugins2-overview/jira-plugin-module-types/web-section-plugin-module)
+* [Web Items](https://developer.atlassian.com/jiradev/jira-platform/building-jira-add-ons/jira-plugins2-overview/jira-plugin-module-types/web-item-plugin-module)
+* [Issue Link Renderer](https://developer.atlassian.com/jiradev/jira-platform/building-jira-add-ons/jira-plugins2-overview/jira-plugin-module-types/issue-link-renderer-plugin-module)
+* [Rest Module](https://developer.atlassian.com/jiradev/jira-platform/building-jira-add-ons/jira-plugins2-overview/jira-plugin-module-types/rest-plugin-module-type)
+* [Webwork Module](https://developer.atlassian.com/jiradev/jira-platform/building-jira-add-ons/jira-plugins2-overview/jira-plugin-module-types/rest-plugin-module-type)
