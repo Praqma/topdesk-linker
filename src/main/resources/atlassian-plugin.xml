@@ -20,5 +20,12 @@
 
         <context>ms-topdesk-linker</context>
     </web-resource>
+
+    <!-- Entry in More Actions -->
+    <web-section key="my_links_section" name="My Links Main Section" location="opsbar-operations" weight="10"/>
+    <web-item key="my_links_link" name="Link on My Links Main Section" section="operations-operations" weight="47">
+        <label>Update TopDesk</label>
+        <link linkId="my_links_link">http://www.atlassian.com</link>
+    </web-item>
     
 </atlassian-plugin>
