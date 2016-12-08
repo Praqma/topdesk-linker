@@ -10,7 +10,7 @@ public class UpdateTopDeskAction extends JiraWebActionSupport {
     
     @Override
     public String execute() throws Exception {
-        log.warn("IT WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");;
+        log.warn("IT WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         return super.execute(); //returns SUCCESS
     }
 }
