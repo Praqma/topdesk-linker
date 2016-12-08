@@ -1,31 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
     <plugin-info>
         <description>${project.description}</description>
         <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
         <param name="plugin-icon">images/pluginIcon.png</param>
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
-
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="ms-topdesk-linker"/>
-    
     <!-- add our web resources -->
     <web-resource key="ms-topdesk-linker-resources" name="ms-topdesk-linker Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
         <resource type="download" name="ms-topdesk-linker.css" location="/css/ms-topdesk-linker.css"/>
         <resource type="download" name="ms-topdesk-linker.js" location="/js/ms-topdesk-linker.js"/>
         <resource type="download" name="images/" location="/images"/>
-
         <context>ms-topdesk-linker</context>
     </web-resource>
 
-    <!-- Entry in More Actions -->
-    <web-section key="my_links_section" name="My Links Main Section" location="opsbar-operations" weight="10"/>
-    <web-item key="my_links_link" name="Link on My Links Main Section" section="operations-operations" weight="47">
-        <label>Update TopDesk</label>
-        <link linkId="my_links_link">http://www.atlassian.com</link>
+  
+    <web-item name="mywc" i18n-name-key="mywc.name" key="mywc" section="operations-operations" weight="1000">
+        <description key="mywc.description">The mywc Plugin</description>
+        <label key="mywc.label"/>
+        <link linkId="mywc-link">/secure/UpdateTopDesk.jspa?issue=${issue.id}</link>
     </web-item>
-    
+  
+    <webwork1 key="myww" name="myww" i18n-name-key="myww.name">
+        <description key="myww.description">The myww Plugin</description>
+        <actions>
+            <action name="com.praqma.plugins.atlassian.jira.jira.webwork.UpdateTopDeskAction" alias="UpdateTopDesk">
+                <view name="success">/templates/myww/success.vm</view>
+        </actions>
+    </webwork1>
 </atlassian-plugin>

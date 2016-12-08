@@ -20,7 +20,7 @@ public class MyPluginComponentImpl implements MyPluginComponent
     {
         this.applicationProperties = applicationProperties;
     }
-
+    
     public String getName()
     {
         if(null != applicationProperties)
